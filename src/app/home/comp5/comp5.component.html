@@ -1,4 +1,4 @@
 <div class="wrapper dis-flex">
-    <input placeholder="Enter data" class="wid-30 form-control" type="text" [(ngModel)]='data' >
-    <button class="btn btn-success cus-radius" (click)='Submit()'>Submit</button>
+    <input placeholder="Enter data" (input)="Submit()" class="form-control border-rad" type="text" [(ngModel)]='data' >
+    <!-- <button class="btn btn-success cus-radius" (click)='Submit()'>Submit</button> -->
 </div>
