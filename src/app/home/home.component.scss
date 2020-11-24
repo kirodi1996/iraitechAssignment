@@ -1,0 +1,25 @@
+.content{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ccc;
+}
+
+
+
+.comp2{
+    margin-left: auto;
+}
+.comp3{
+    margin-top: auto;
+}
+.comp4{
+    margin-left: auto;
+    margin-top: auto;
+}
+.comp5{
+    display: flex  ;    
+    justify-content: center;
+    align-items: center;
+}

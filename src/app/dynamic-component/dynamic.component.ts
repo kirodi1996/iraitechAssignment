@@ -12,9 +12,11 @@ export class DynamicDashboard {
     constructor(private componentFactoryResolver:ComponentFactoryResolver){}
     AddX(){
         const componentFactory = this.componentFactoryResolver.resolveComponentFactory(XComponent);
-
-        // add the component to the view
         const componentRef = this.dynamic.createComponent(componentFactory);
-        //this.dynamicDashboard.push({componentType:XComponent})
+        componentRef.instance.id='x'+new Date().getTime();
+        componentRef.instance.tabNameEmit.subscribe(x=>{
+          console.log(x);
+        })
+        
     }
 }

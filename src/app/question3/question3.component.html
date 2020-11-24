@@ -1,26 +1,27 @@
-<div *ngFor='let phoneNumber of phoneNumberData;let i=index'>
-    <input type="text" name="row_{{i}}" maxlength="10"  [(ngModel)]="phoneNumber.phoneNumber"
-         #ngModel='' placeholder="">
-         <span (click)='deletePhoneNumber(i)' *ngIf='phoneNumberData.length>1'>
-            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 86.95 86.95' width='10px' >
-                <g id='Group_182' data-name='Group 182' transform='translate(-2370 -608)'>
-                  <circle id='Ellipse_25' data-name='Ellipse 25' cx='43.475' cy='43.475' r='43.475'
-                    transform='translate(2370 608)' fill='#db2128'></circle>
-                  <g id='rubbish-bin' transform='translate(2396.928 634.025)'>
-                    <g id='Group_79' data-name='Group 79' transform='translate(0 0)'>
-                      <path id='Path_64' data-name='Path 64'
-                        d='M75.413,134.272a2.272,2.272,0,0,0,2.053,2.37H96.649a2.273,2.273,0,0,0,2.053-2.37l1.37-34.8H74.043ZM91.4,108.113a.931.931,0,0,1,.835-1h1.335a.932.932,0,0,1,.835,1V128a.931.931,0,0,1-.835,1H92.231a.931.931,0,0,1-.835-1Zm-5.841,0a.931.931,0,0,1,.835-1h1.335a.931.931,0,0,1,.835,1V128a.931.931,0,0,1-.835,1H86.39a.931.931,0,0,1-.835-1V108.113Zm-5.842,0a.931.931,0,0,1,.835-1h1.335a.931.931,0,0,1,.835,1V128a.931.931,0,0,1-.835,1H80.548a.931.931,0,0,1-.835-1Z'
-                        transform='translate(-71.101 -99.468)' fill='#fff'></path>
-                      <path id='Path_65' data-name='Path 65'
-                        d='M82.577,2.811H73.3V.575A.525.525,0,0,0,72.845,0H63.1a.525.525,0,0,0-.451.575V2.811H53.368a1.572,1.572,0,0,0-1.352,1.723V9.948H83.929V4.534A1.572,1.572,0,0,0,82.577,2.811Z'
-                        transform='translate(-52.016 2.053)' fill='#fff'></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-         </span> 
+<div class="wrapper">
+  <div class="dis-flex mt-20" *ngFor='let phoneNumber of phoneNumberData;let i=index'>
+    <input placeholder="Enter phone number" class="form-control wid-30 mr-10" type="text" name="row_{{i}}" maxlength="10" [(ngModel)]="phoneNumber.phoneNumber" #ngModel='' >
+    <span (click)='deletePhoneNumber(i)' *ngIf='phoneNumberData.length>1'>
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 86.95 86.95'>
+        <g id='Group_182' data-name='Group 182' transform='translate(-2370 -608)'>
+          <circle id='Ellipse_25' data-name='Ellipse 25' cx='43.475' cy='43.475' r='43.475'
+            transform='translate(2370 608)' fill='#db2128'></circle>
+          <g id='rubbish-bin' transform='translate(2396.928 634.025)'>
+            <g id='Group_79' data-name='Group 79' transform='translate(0 0)'>
+              <path id='Path_64' data-name='Path 64'
+                d='M75.413,134.272a2.272,2.272,0,0,0,2.053,2.37H96.649a2.273,2.273,0,0,0,2.053-2.37l1.37-34.8H74.043ZM91.4,108.113a.931.931,0,0,1,.835-1h1.335a.932.932,0,0,1,.835,1V128a.931.931,0,0,1-.835,1H92.231a.931.931,0,0,1-.835-1Zm-5.841,0a.931.931,0,0,1,.835-1h1.335a.931.931,0,0,1,.835,1V128a.931.931,0,0,1-.835,1H86.39a.931.931,0,0,1-.835-1V108.113Zm-5.842,0a.931.931,0,0,1,.835-1h1.335a.931.931,0,0,1,.835,1V128a.931.931,0,0,1-.835,1H80.548a.931.931,0,0,1-.835-1Z'
+                transform='translate(-71.101 -99.468)' fill='#fff'></path>
+              <path id='Path_65' data-name='Path 65'
+                d='M82.577,2.811H73.3V.575A.525.525,0,0,0,72.845,0H63.1a.525.525,0,0,0-.451.575V2.811H53.368a1.572,1.572,0,0,0-1.352,1.723V9.948H83.929V4.534A1.572,1.572,0,0,0,82.577,2.811Z'
+                transform='translate(-52.016 2.053)' fill='#fff'></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
 
+  </div>
+  <button class="btn btn-info mr-20 mt-20" (click)='addPhoneuNumberField()'>Add Phone Number</button>
+
+  <button class="btn btn-success mt-20"  (click)='submitPhoneNumber()'>Submit</button>
 </div>
-<button (click)='addPhoneuNumberField()'>Add Phone Number</button>
-
-<button (click)='submitPhoneNumber()'>Submit</button>

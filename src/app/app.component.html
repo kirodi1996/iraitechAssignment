@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<div class="container mt-20">
+    <div class="row">
+        <div class="col-sm-12">
+
+            <ul class="nav nav-tabs">
+                <li><a routerLink="/question1" routerLinkActive="active">Question 1</a></li>
+                <li><a routerLink="/question2" routerLinkActive="active">Question 2</a></li>
+                <li><a routerLink="/question3" routerLinkActive="active">Question 3</a></li>
+                <li><a routerLink="/question4" routerLinkActive="active">Question 4</a></li>
+              </ul>
+            
+              <div class="tab-content">
+                <div class="tab-pane fade in active">
+                    <router-outlet></router-outlet>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

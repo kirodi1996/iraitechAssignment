@@ -1,4 +1,8 @@
-<input type='number' [(ngModel)]='index' #ctrl="ngModel">
-<button (click)='findNumber()'>Find number</button>
-
-{{value}}
+<div class="wrapper dis-flex">
+    <input placeholder="Enter number" type='number' class="form-control wid-30" [(ngModel)]='index' #ctrl="ngModel">
+    <button class="btn cus-radius btn-success" (click)='findNumber()'>Find number</button>
+</div>
+<div *ngIf="value"  class="result">
+    <span>Value: {{value}}</span>
+    
+</div>

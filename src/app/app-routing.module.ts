@@ -6,6 +6,11 @@ import { Question3Component } from './question3/question3.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'question1',
+    pathMatch: 'full'
+  },
+  {
     path: 'question1', component: Question1Component
   },
   {
